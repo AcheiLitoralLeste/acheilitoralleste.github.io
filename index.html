@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+  <head>
+    <!-- <base href="/"> -->
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#004e7b">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="img/icon-gl.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon-gl.png">
+    <link rel="manifest" href="manifest.json">
+    <title>Achei Litoral</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <main>
+        <header>
+          <nav>
+            <a class="link-nav" href="#/about">quem somos</a>
+            <!-- <a class="link-nav" href="#/contact">contato</a> -->
+          </nav>
+          <div class="inner-header">
+            <div class="wrapper-logo">
+              <h1>
+                <a class="logo-link" href="#/">
+                  <img src="img/logo_guia.svg" alt="Achei Litoral Leste">
+                </a>
+              </h1>
+            </div>
+            <div class="header-tagline">
+              <p class="tagline-color">O melhor guia de telefones e endereços da região</p>
+              <!-- <p class="tagline-sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, numquam, dolorem.</p> -->
+            </div>
+          </div>
+        </header>
+        <!-- <div ui-header></div> -->
+        <section class="container" ng-controller="CompanyController">
+          <ng-view></ng-view>
+
+
+
+        </section>
+        <footer>
+            <div class="container">
+              <a class="logo-footer" href="">
+                <img src="img/logo_guia2.svg" alt="">
+              </a>
+              <p>Copyright © 2017 Achei Litoral Leste</p>
+              <a class="link-github" href="" target="_blank">
+                <img src="img/github-logo.svg" alt="">
+              </a>
+            </div>
+        </footer>
+    </main>
+      <script src="js/lib/angular.min.js"></script>
+      <script src="js/lib/angular-route.min.js"></script>
+      <script src="js/lib/ngMask.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/index.js"></script>
+
+      <script src="js/controllers/company-controller.js"></script>
+      <script src="js/directives/uiDirective.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+      <script>
+        var config = {
+          apiKey: "AIzaSyCyYFrwM3JtEFTNEbVrk3ug7D2dZ7n5L2I",
+          authDomain: "achei-litoral-leste.firebaseapp.com",
+          databaseURL: "https://achei-litoral-leste.firebaseio.com",
+          projectId: "achei-litoral-leste",
+          storageBucket: "achei-litoral-leste.appspot.com",
+          messagingSenderId: "153432447027"
+        };
+        firebase.initializeApp(config);
+        </script>
+      <!-- AngularFire -->
+      <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<section class="wrapper-form">
+  <form name="addForm" ng-submit="addCompany()">
+    <fieldset>
+      <label for="">Empresa</label>
+      <input class="input" ng-model="company" ng-required="true"/>
+    </fieldset>
+    <fieldset>
+      <label for="">Endereço</label>
+      <input class="input" ng-model="address" ng-required="true"/>
+    </fieldset>
+    <fieldset>
+      <label for="">Bairro</label>
+      <input class="input" ng-model="bairro" ng-required="true"/>
+    </fieldset>
+    <fieldset>
+      <label for="">E-mail</label>
+      <input class="input" ng-model="email" ng-required="true"/>
+    </fieldset>
+    <fieldset class="fieldset-middle">
+      <label for="">Telefone</label>
+      <input class="input input-middle" ng-model="tel" ng-required="true" mask="(99) 9?9999-9999" restrict="reject"/>
+    </fieldset>
+    <fieldset class="fieldset-middle">
+      <label>Categoria</label>
+      <select ng-model="category" ng-options="category.name for category in categories" ng-required="true">
+        <option value="">Selecione uma categoria</option>
+      </select>
+    </fieldset>
+    <button class="btn btn-primary" ng-disabled="addForm.$invalid" type="submit">Cadastrar</button>
+    <button class="btn btn-secundary" ng-link="#/">Voltar</button>
+  </form>
+</section>

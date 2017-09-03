@@ -1,0 +1,38 @@
+footer {
+  float: left;
+  width: 100%;
+  background-color: $color-default;
+  margin-top: 20px;
+  color: $color-white;
+  height: 100px;
+  position: relative;
+  .link-github {
+    display: block;
+    width: 30px;
+    float: right;
+    margin-top: 38px;
+    @media (max-width: 480px) {
+      position: absolute;
+      right: 15px;
+      margin-top: 0;
+      top: 30px;
+    }
+  }
+  p {
+    float: left;
+    margin: 45px 0 20px 20px;
+    @media (max-width: 480px) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .logo-footer {
+    display: block;
+    width: 130px;
+    float: left;
+    margin-top: 38px;
+    @media (max-width: 480px) {
+      margin: 15px auto;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "lang": "en",
+  "name": "Achei Litoral",
+  "short_name": "AcheiLitoral",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#462373",
+  "theme_color": "#462373",
+  "icons": [{
+    "src": "img/icon-gl.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }, {
+    "src": "img/icon-gl.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}

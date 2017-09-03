@@ -1,0 +1,33 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.box-search {
+  max-width: 500px;
+  margin: 40px auto;
+  position: relative;
+  .icon-search {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #004e7b;
+  }
+}
+.box-item {
+  border-top: 1px solid #ccc;
+  padding-bottom: 20px;
+  color: #004e7b;
+  .box-title {
+    font-size: 1.5em;
+    h2 {
+      margin: 20px 0;
+    }
+  }
+  .box-body {
+    font-size: 1em;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}

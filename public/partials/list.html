@@ -1,0 +1,23 @@
+<section class="box-search">
+  <input type="text" name="filtro" ng-model="search" class="input input-search" placeholder="Digite o nome da empresa">
+  <span class="icon-search fui-search"></span>
+</section>
+
+<div ui-load></div>
+
+<article class="">
+  <div ng-repeat="data in data | filter: search" class="box-item">
+    <div class="box-title">
+      <h2 class="">{{data.company}}</h2>
+    </div>
+    <div class="box-body">
+      <ul>
+        <li><strong>Endereço:</strong> {{data.address}}</li>
+        <li><strong>Bairro:</strong> {{data.bairro}}</li>
+        <li><strong>E-mail:</strong> {{data.email}}</li>
+        <li><strong>Telefone:</strong> {{data.tel}}</li>
+        <li><strong>Categoria:</strong> {{data.category.name}}</li>
+      </ul>
+    </div>
+  </div>
+</article>
