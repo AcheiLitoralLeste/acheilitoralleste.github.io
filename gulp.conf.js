@@ -37,6 +37,7 @@ module.exports = {
             baseDir: 'public',
             index: 'index.html',
             cors: true
-        }
+        },
+        online: true
     }
 }

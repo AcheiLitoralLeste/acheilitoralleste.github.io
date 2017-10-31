@@ -7,7 +7,7 @@
 var gulp = require('gulp'),
     config = require('./gulp.conf.js'),
     header = require('gulp-header'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
     requireDir = require('require-dir'),
     dir = requireDir('./tasks');

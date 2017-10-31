@@ -1,39 +1,13 @@
-// const publicKey = 'BAH4QMJYTaK3CfeJrn002rKADCF5PZm3voFTnBvNxEyjPCdjLtS7jg0ce8CzRy8NcQM1DAc7Al28Bo6-Ymp4Gps';
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
-    .then(function () {
-      console.log('service worker registered');
+
+  navigator.serviceWorker
+    .register('../sw.js', { scope: './' })
+    .then(function(registration) {
+      console.log("Service Worker Registered");
     })
-    .catch(function () {
-      console.warn('service worker failed');
-    });
+    .catch(function(err) {
+      console.warn("Service Worker Failed to Register", err);
+    })
+
 }
-
-
-
-// navigator.serviceWorker && navigator.serviceWorker.register('../sw.js').then(function(registration) {
-//   console.log('Excellent, registered with scope: ', registration.scope);
-// });
-
-// navigator.serviceWorker && navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-//   serviceWorkerRegistration.pushManager.getSubscription()
-//     .then(function(subscription) {
-//       // subscription will be null or a PushSubscription
-//       if (subscription) {
-//         console.info('Got existing', subscription);
-//         window.subscription = subscription;
-//         return;  // got one, yay
-//       }
-
-//       const applicationServerKey = urlB64ToUint8Array(publicKey);
-//       serviceWorkerRegistration.pushManager.subscribe({
-//           userVisibleOnly: true,
-//           applicationServerKey,
-//       })
-//         .then(function(subscription) {
-//           console.info('Newly subscribed to push!', subscription);
-//           window.subscription = subscription;
-//         });
-//     });
-// });
